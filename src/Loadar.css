@@ -1,0 +1,63 @@
+/* Loader.css */
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    /* Light background */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    /* Ensure loader is on top */
+}
+
+.loader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+}
+
+.loader-inner {
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    /* Gradient color */
+    border-radius: 50%;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.loader-inner:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loader-inner:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.loader-inner:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}

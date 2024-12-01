@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Google Sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+}
+
+section.sectionblock {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+form h2 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 7px;
+    margin-bottom: 30px;
+}
+
+.check {
+    display: flex;
+    align-items: baseline;
+}
+
+.check .inp {
+    padding: 0px;
+    width: 25px;
+}
+
+/* Style for form labels */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.signupnow p {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 18px;
+}
+
+/* Style for form inputs */
+input[type="tel"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00ffc3;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #74b300;
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+}
+
+input[type="tel"]::placeholder,
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="checkbox"] ::placeholder {
+    color: #74b300;
+}
+
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="checkbox"]:focus {
+    border-bottom: 2px solid #74b300;
+    outline: none;
+}
+
+/* Style for the forgot password link */
+div>a {
+    display: block;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Style for the login button */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #00ffc3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #74b300;
+}
+
+/* Style for the error message */
+div[style] {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Style for the signup link */
+div>p>a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+/*Login form*/
+
+.footer-section {
+    text-align: center;
+    background-color: #1c1a1af3;
+    padding: 20px 10px;
+}
+
+
+
+.scrollToTopButton {
+    position: fixed;
+    bottom: 135px;
+    color: white;
+    padding: 9px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    left: 50%;
+    border: 2px solid #E876B0;
+    background: #76e8c8;
+}
+
+.arrow-up {
+    font-size: 24px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .user {
+        min-width: 0;
+    }
+
+    .userall {
+        max-width: 200px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .user {
+        flex-basis: calc(50% - 20px);
+        /* Adjust for even smaller screens */
+    }
+}
+
+/*Message for user*/
+
+
+
+@media print {
+    /* A4 Page Dimensions */
+    .a4-container {
+        width: 210mm;
+        height: 297mm;
+        padding: 10mm;
+        margin: 0 auto;
+    }
+
+    .a4-resume-container {
+        page-break-inside: avoid;
+    }
+
+    /* Ensuring proper fonts and spacing */
+    .a4-resume-content {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    .a4-resume-container h2, .a4-resume-container h3 {
+        font-size: 18pt;
+    }
+
+    /* Styling for resume sections */
+    .a4-resume-content h4 {
+        font-size: 14pt;
+        margin-top: 20px;
+    }
+    
+    .a4-resume-content p {
+        font-size: 10pt;
+    }
+
+    .a4-resume-container img {
+        width: 100px;
+        height: 100px;
+    }
+}

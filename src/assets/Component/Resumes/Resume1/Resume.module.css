@@ -1,0 +1,11 @@
+.downlode_header {
+    text-align: center;
+    margin-top: 30px;
+    border-bottom: 5px solid #ff007e;
+}
+
+.downlode_header h2 {
+    color: #4b5672;
+    text-transform: uppercase;
+    font-size: 30px;
+}
