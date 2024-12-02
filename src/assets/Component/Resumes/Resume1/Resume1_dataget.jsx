@@ -170,7 +170,7 @@ const Resume1_dataget = () => {
                     resumes.map((resume, index) => (
                         <div key={index} id={`resume-${resume._id}`} className="a4-resume-container mb-10">
                             {/* Resume Content */}
-                            <div className="a4-resume-content bg-white shadow-lg p-8 border border-gray-300">
+                            <div className="a4-resume-content bg-white shadow-lg p-8 border border-gray-300 border-b-0">
                                 {/* Header Section */}
                                 <div className="flex items-center gap-8">
                                     {resume.profilePic && (
@@ -211,17 +211,17 @@ const Resume1_dataget = () => {
                                         {/* Expertise Section */}
                                         <div className="mt-2 pb-5">
                                             <h4 className="font-semibold text-lg border-b-2 text-black uppercase pb-2">Expertise</h4>
-                                            <ul className="list-disc pl-5">
+                                            <ul className="list-disc pl-5 pb-3">
                                                 {resume.expertise.skills.map((skill, idx) => (
-                                                    <li key={idx} className="text-sm mt-3">{skill}</li>
+                                                    <li key={idx} className="text-sm mt-3 text-black">{skill}</li>
                                                 ))}
                                             </ul>
                                         </div>
 
                                         {/* Language Section */}
                                         <div className="mt-2">
-                                            <h4 className="font-semibold text-lg border-b-2 text-black uppercase pb-3">Language</h4>
-                                            <ul className="list-disc pl-5">
+                                            <h4 className="font-semibold text-lg border-b-2 text-black uppercase pb-2">Language</h4>
+                                            <ul className="list-disc pl-5 text-black">
                                                 {resume.languages.map((lang, idx) => (
                                                     <li key={idx} className="text-sm mt-3 text-black">{lang}</li>
                                                 ))}
@@ -233,7 +233,7 @@ const Resume1_dataget = () => {
                                     <div className="ml-5 w-2/3">
                                         {/* Experience Section */}
                                         <div className="mt-2">
-                                            <h4 className="font-semibold text-lg border-b-2 text-black uppercase">Experience</h4>
+                                            <h4 className="font-semibold text-lg border-b-2 text-black uppercase pb-2">Experience</h4>
                                             {resume.experience.map((exp, idx) => (
                                                 <div key={idx} className="mb-5">
                                                     <div className="flex gap-5 mt-2 text-sm">
@@ -247,7 +247,7 @@ const Resume1_dataget = () => {
 
                                         {/* Education Section */}
                                         <div className="mt-2">
-                                            <h4 className="font-semibold text-lg border-b-2 text-black uppercase">Education</h4>
+                                            <h4 className="font-semibold text-lg border-b-2 text-black uppercase pb-2">Education</h4>
                                             {resume.education.map((edu, idx) => (
                                                 <div key={idx} className="mb-5 text-black">
                                                     <div className="flex gap-5 mt-2 text-sm">
@@ -261,7 +261,7 @@ const Resume1_dataget = () => {
 
                                         {/* Projects Section */}
                                         <div className="mt-2">
-                                            <h4 className="font-semibold text-lg border-b-2 text-black uppercase">Projects</h4>
+                                            <h4 className="font-semibold text-lg border-b-2 text-black uppercase pb-2">Projects</h4>
                                             {resume.projects.map((proj, idx) => (
                                                 <div key={idx} className="mb-5">
                                                     <p className="font-bold text-black ">{proj.title}</p>
@@ -272,14 +272,14 @@ const Resume1_dataget = () => {
 
                                         {/* References Section */}
                                         <div className="mt-2">
-                                            <h4 className="font-semibold text-lg border-b-2 text-black uppercase">References</h4>
+                                            <h4 className="font-semibold text-lg border-b-2 text-black uppercase pb-2">References</h4>
                                             {resume.references.map((ref, idx) => (
                                                 <div key={idx} className="mb-4">
-                                                    <p className='text-black '><strong>Name:</strong> {ref.name}</p>
-                                                    <p className='text-black '><strong>Job Title:</strong> {ref.jobTitle}</p>
-                                                    <p className='text-black '><strong>Company:</strong> {ref.company}</p>
-                                                    <p className='text-black '><strong>Phone:</strong> {ref.phone}</p>
-                                                    <p className='text-black '><strong>Email:</strong> {ref.email}</p>
+                                                    <p className='text-black '>{ref.name}</p>
+                                                    <p className='text-black '> {ref.jobTitle}</p>
+                                                    <p className='text-black '> {ref.company}</p>
+                                                    <p className='text-black '> {ref.phone}</p>
+                                                    <p className='text-black '>{ref.email}</p>
                                                 </div>
                                             ))}
                                         </div>

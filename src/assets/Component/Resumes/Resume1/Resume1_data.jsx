@@ -135,7 +135,6 @@ const Resume1_data = () => {
                     'Authorization': `Bearer ${token}`
                 }
             });
-            console.log('Success:', response.data);
             alert('Resume submitted successfully!');
             handelClear();
             navigate('/getresume1');
